@@ -1,10 +1,13 @@
 import java.math.BigInteger;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.io.File;
+import java.io.IOException;
 public class Decrypt
 {
-	public static void main(String[] args) throws FileNotFoundException
+	public static void main(String[] args) throws FileNotFoundException, IOException
 	{
 		if(args.length == 0)
 		{
@@ -13,6 +16,7 @@ public class Decrypt
 		}
 		String cipherKey = args[0];
 		String fileLocation = args[1];
+		String newFile = args[2];
 		File secret = new File(fileLocation);
 		Scanner ini = new Scanner(secret);
 		Scanner s = new Scanner(secret);
@@ -23,6 +27,8 @@ public class Decrypt
 			ini.nextLine();
 //			text += s.nextLine();
 		}
+		FileWriter write = new FileWriter(newFile, true);
+		PrintWriter print = new PrintWriter(write);
 		String[] textArray = new String[lines];
 		for(int i = 0; i < lines; i++)
 		{
@@ -30,8 +36,10 @@ public class Decrypt
 		}
 		for(int i = 0; i < textArray.length; i++)
 		{
-			System.out.println(decrypt(textArray[i], passToNum((i % 20) + cipherKey)));
+			print.printf("%s" + "%n", (decrypt(textArray[i], passToNum((i % 20) + cipherKey))));
+			//System.out.println(decrypt(textArray[i], passToNum((i % 20) + cipherKey)));
 		}
+		print.close();
 		ini.close();
 		s.close();
 //		while(s.hasNextLine())
