@@ -1,0 +1,25 @@
+#!/bin/bash
+
+while getopts "edh" OPTION
+do
+	case $OPTION in
+		d)
+			KEY=$2
+			TEXT=$3
+			FILE=$4
+			java -jar ~/.cryptt/Decrypt.jar $KEY $TEXT $FILE
+			exit
+			;;
+		e)
+			KEY=$2
+			TEXT=$3
+			FILE=$4
+			java -jar ~/.cryptt/Encrypt.jar $KEY $TEXT $FILE
+			exit
+			;;
+		h)	echo "Usage: cryptt [-e] or [-d] [key] [file location] [new file location]"
+			exit
+			;;
+	esac
+done
+

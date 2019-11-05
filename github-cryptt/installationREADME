@@ -1,0 +1,14 @@
+To install cryptt, make sure that you don't have any previous version installed. If you do, run the following command:
+ - sudo ./fresh
+
+After this is done (or if this is the first installation), run the following:
+ - sudo ./install
+
+After this is done, it would be advised to make a test file and encrypt and decrypt it using the following commands.
+ - First, navigate to somewhere that isn't cluttered.
+ - nano fileOG #Enter any text you want to in this file
+ - cryptt -e testingKey fileOG fileEC
+ - cryptt -d testingKey fileEC fileDC
+ - cat fileDC
+
+The two files (fileOG and fileDC) should be identical. If they are, cryptt is correctly installed.

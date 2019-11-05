@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir ~/.cryptt
+mv Encrypt.jar ~/.cryptt
+mv Decrypt.jar ~/.cryptt
+mv cryptt /bin
