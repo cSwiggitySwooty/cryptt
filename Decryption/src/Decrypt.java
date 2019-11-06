@@ -120,7 +120,7 @@ public class Decrypt
 		}
 		for(int i = 0; i < cipherText.length(); i++)
 		{
-			plainTextArray[i] = (char)(cipherTextArray[i] - Character.getNumericValue(keyString.charAt(i)));
+			plainTextArray[i] = (char)(cipherTextArray[i] + Character.getNumericValue(keyString.charAt(i)));
 		}
 		for(int i = 0; i < plainTextArray.length; i++)
 		{

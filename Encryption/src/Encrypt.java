@@ -114,7 +114,7 @@ public class Encrypt
 		}
 		for(int i = 0; i < plainText.length(); i++)
 		{
-			cipherTextArray[i] = (char)(plainTextArray[i] + Character.getNumericValue(keyString.charAt(i)));
+			cipherTextArray[i] = (char)(plainTextArray[i] - Character.getNumericValue(keyString.charAt(i)));
 		}
 		for(int i = 0; i < cipherTextArray.length; i++)
 		{
