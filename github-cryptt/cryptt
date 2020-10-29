@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while getopts "edh" OPTION
+while getopts "edhu" OPTION
 do
 	case $OPTION in
 		d)
@@ -20,6 +20,12 @@ do
 		h)	echo "Usage: cryptt [-e] or [-d] [key] [file location] [new file location]"
 			exit
 			;;
+		u)	echo "Cryptt is a program that encrypts and decrypts simple text documents using specific keys."
+			echo "It was created using Java and by utilizing functions that are not easily reversible such as rounding, square roots, and trigonometry."
+			echo "To update, simply download the cryptt-installer repository from GitHub and run the installer again."
+			exit
+			;;
+			
 	esac
 done
 

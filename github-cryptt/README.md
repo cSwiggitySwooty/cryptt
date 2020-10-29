@@ -1,0 +1,19 @@
+# cryptt-installer
+Cryptt is a program that encrypts and decrypts simple text documents using specific keys.
+
+Dependencies
+ - The only dependency is the latest version of Java.
+ -  If running on Windows, you will have to configure a batch file yourself.
+
+To install, run the following:
+ - sudo chmod +x install
+ - sudo ./install
+
+After this is done, it would be advised to make a test file and encrypt and decrypt it using the following commands.
+ - First, navigate to somewhere that isn't cluttered.
+ - nano fileOG #Enter any text you want to in this file
+ - cryptt -e testingKey fileOG fileEC
+ - cryptt -d testingKey fileEC fileDC
+ - cat fileDC
+
+The two files (fileOG and fileDC) should be identical. If they are, cryptt is correctly installed.

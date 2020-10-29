@@ -1,6 +1,12 @@
 #!/bin/bash
 
+echo 'Making hidden directory.'
 mkdir ~/.cryptt
+echo 'Giving install permissions.'
+sudo chmod +x cryptt
+echo 'Moving everything to the appropriate locations.'
 mv Encrypt.jar ~/.cryptt
 mv Decrypt.jar ~/.cryptt
-mv cryptt /bin
+sudo mv cryptt /bin
+echo "Done! For more information, please type 'cryptt -u\'."
+exit
