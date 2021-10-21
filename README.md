@@ -1,5 +1,5 @@
 # encryption-algorithm
-An encryption/decryption algorithm created by using irrational functions on integers and then using the key as a cipher.
+An encryption/decryption algorithm created by using irrational operations on integers and then using the key as a cipher.
 
 It uses trig, square roots, and other functions that make it so the key cannot reliably recreated.
 
